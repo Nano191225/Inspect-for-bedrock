@@ -66,3 +66,20 @@ world.events.blockPlace.subscribe(blockPlace => {
         blockLoggingDatabaseDB.set(Pos, blockLoggingDatabase[Pos]);
     }
 });
+
+function msToTime(str) {
+    if(str > new Date().getTime()) str = str - new Date().getTime();
+    const ms = str;
+    const w = Math.floor(ms / (1000 * 60 * 60 * 24 * 7));
+    const d = Math.floor(ms / (1000 * 60 * 60 * 24));
+    const h = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((ms % (1000 * 60)) / 1000);
+    return {
+        w: w,
+        d: d,
+        h: h,
+        m: m,
+        s: s
+    };
+}
