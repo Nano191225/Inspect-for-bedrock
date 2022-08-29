@@ -1,5 +1,7 @@
 import * as Minecraft from "mojang-minecraft";
 
+const world = Minecraft.world;
+
 let blockLoggingDatabaseDB = new Database("BlockLogging");
 let blockLoggingDatabase = [];
 
