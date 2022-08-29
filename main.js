@@ -1,3 +1,5 @@
+import * as Minecraft from "mojang-minecraft";
+
 let blockLoggingDatabaseDB = new Database("BlockLogging");
 let blockLoggingDatabase = [];
 
